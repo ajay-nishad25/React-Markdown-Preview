@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ReactMarkdown from 'react-markdown'
 
 function App() {
+
+  const[getText,setText] = useState("");
+
+  const handleOnChange = (event) =>{
+    console.log(event.target.value);
+    setText(event.target.value);
+  }
+
+  const handleResetClick = () =>{
+    setText("");
+  }
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="left-div">
+            <div className="container-left">
+                <div className="tab-left">Edit</div>
+                <div className="reset" onClick={handleResetClick}>🔁 Reset</div>
+            </div>
+            <div class="below-left"> 
+              <textarea className="write-markdown" 
+              value={getText}
+              onChange={handleOnChange}>
+              </textarea>
+            </div>
+        </div>
+
+        <div className="right-div">
+          <div className="container-right">
+            <div className="tab-right">Preview.md</div>
+          </div>
+          <div className="right-below"> 
+              <ReactMarkdown>{getText}</ReactMarkdown>
+          </div>
+        </div>
     </div>
   );
 }

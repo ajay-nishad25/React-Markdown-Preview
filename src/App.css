@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.App{
+    height: 100vh;
+    width: 100%;
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --primary-text-color: #f2f2f2;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.left-div{
+    height: 100%;
+    width: 100vw;
+    margin-top: 10px;
+}
+
+.right-div{
+    height: 100%;
+    width: 100vh;
+    padding-inline-start: 10px;
+    margin-top: 13px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.left-div, .right-div {
+    width: 50%; 
+    
+    padding-inline-start : 2px;
   }
+
+
+.write-markdown{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    padding-inline: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/*  */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tab-left{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-text-color);
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor:pointer;
   }
-  to {
-    transform: rotate(360deg);
+
+.tab-right{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor:pointer;
   }
+  
+  
+  .right-below{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+  }
+
+  .below-left{
+    width: 100%;
+    height: 95vh;
+    border: 1px solid #ccc;
+    background-color: var(--primary-text-color); 
+  }
+  
+  .container{
+    display: flex;
+  }
+  
+  .reset{
+    display: inline-block;
+    padding: 10px 20px;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+  }
+
+  /* Hiding scrollbar  */
+  ::-webkit-scrollbar {
+    display: none;
 }
