@@ -9,7 +9,7 @@ This project was developed with a focus on simplicity and ease of use. With its 
 * User-friendly interface for pasting or writing Markdown text
 * Live preview of the Markdown output
 
-## Demo
+### Demo
 
 https://github.com/ajay-nishad25/React-Markdown-Preview/assets/92628257/e2d83bba-01a9-43f8-bb91-28b0e87c9485
 
